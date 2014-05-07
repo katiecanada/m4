@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, url_for, redirect
 app = Flask(__name__)
 
 # Note: We don't need to call run() since our application is embedded within
@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     """Return a friendly HTTP greeting."""
-    return 'Hello World!'
+    return redirect(url_for('static', filename='index.html'))
 
 
 @app.errorhandler(404)
