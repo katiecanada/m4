@@ -12,7 +12,7 @@
  * License for the specific language governing permissions and limitations under
  * the License
 -->
-	<ModulePrefs title="Hangout Starter">
+	<ModulePrefs title="Social Shopping">
 		<Require feature="rpc" />
 		<Require feature="views" />
 		<Require feature="locked-domain" />
@@ -40,56 +40,13 @@
 
 <script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
 
-<h3>Simple Hangout App</h3>
+<h3>Social Shopping Hangout App</h3>
+<iframe src="https://astore.amazon.com/247shoppingpr-20" width="100%" height="500" frameborder="0" scrolling="yes"></iframe>
 
-<p>
-<input class="button" type="button" value="Show participants!" id="showParticipants" 
-    style="visibility:hidden;"
-    onClick="showParticipants()"/>
-</p>
 
-<div id="participantsDiv"></div>
+<div id="shoppingDiv"></div>
 
-<hr>
-
-<p><a href="http://developers.google.com/+/hangouts/getting-started">Read the docs</a> to learn more about developing hangouts!</a></p>
-
-<script>
-function showParticipants() {
-  var participants = gapi.hangout.getParticipants();
-
-  var retVal = '<p>Participants: </p><ul>';
-
-  for (var index in participants) {
-    var participant = participants[index];
-
-    if (!participant.person) {
-      retVal += '<li>A participant not running this app</li>';
-    }
-    retVal += '<li>' + participant.person.displayName + '</li>';
-  }
-
-  retVal += '</ul>';
-
-  var div = document.getElementById('participantsDiv');
-
-  div.innerHTML = retVal;
-}
-
-function init() {
-  // When API is ready...                                                         
-  gapi.hangout.onApiReady.add(
-      function(eventObj) {
-        if (eventObj.isApiReady) {
-          document.getElementById('showParticipants')
-            .style.visibility = 'visible';
-        }
-      });
-}
-
-// Wait for gadget to load.                                                       
-gadgets.util.registerOnLoadHandler(init);
-</script>
+  
 </body>
 ]]>
 </Content>
