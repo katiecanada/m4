@@ -71,11 +71,11 @@ font-size: 14px;
     background-color: #fff;
     float: left;
     margin-bottom: 20px;
-    width: auto;
+    width: 100%;
 }
 
 .tab-content {
-    width: 660px;
+    width: 80%;
     padding: 20px;
     display: none;
 }
