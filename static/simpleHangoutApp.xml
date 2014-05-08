@@ -28,6 +28,8 @@
 
 <h3>Social Shopping Hangout App</h3>
 
+<img id="otherCursor" src="http://etc-mysitemyway.s3.amazonaws.com/icons/legacy-previews/icons/firey-orange-jelly-icons-business/079745-firey-orange-jelly-icon-business-cursor.png" width="50" height="50">
+
 <div id="tabs-container">
     <ul class="tabs-menu">
         <li class="current"><a href="#tab-1">Shared View</a></li>

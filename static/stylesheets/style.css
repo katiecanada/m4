@@ -18,3 +18,10 @@
   body{
     background-color: pink;
   }
+
+
+  #otherCursor{
+    position: absolute;
+    left: 100px;
+    z-index: 1;
+  }
