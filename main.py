@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     """Return a friendly HTTP greeting."""
-    return redirect( 'https://plus.google.com/hangouts/_?gid=504880202642')
+    return redirect( 'http://plus.google.com/hangouts/_?gid=504880202642')
 
 
 @app.errorhandler(404)
