@@ -119,7 +119,7 @@ function onMessageReceived(event) {
 /** Kick off the app. */
 function init() {
   console.log("initing");
-
+  
  // When API is ready...
  gapi.hangout.onApiReady.add(
      function(eventObj) {
@@ -154,5 +154,5 @@ $(document).ready(function() {
         var tab = $(this).attr("href");
         $(".tab-content").not(tab).css("display", "none");
         $(tab).fadeIn();
-      });
-  });
+    });
+});
