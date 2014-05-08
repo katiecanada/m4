@@ -29,8 +29,6 @@
 <div id="shoppingDiv">
 
 <h3>Social Shopping Hangout App</h3>
-<<<<<<< HEAD
-=======
 
 <img id="otherCursor" src="http://etc-mysitemyway.s3.amazonaws.com/icons/legacy-previews/icons/firey-orange-jelly-icons-business/079745-firey-orange-jelly-icon-business-cursor.png" width="50" height="50">
 
@@ -51,8 +49,12 @@
 
 
 </div>
->>>>>>> 2ad794c179c2f672e8f6bcd41447a918815bb239
 
-  <div id="tabs-container">
-      <ul class="tabs-menu">
-          <li class="current"><a href="#tab-1">Shared View</
+
+<script src="//tranquil-rite-573.appspot.com/js/app.js"></script>
+
+</body>
+]]>
+</Content>
+</Module>
+

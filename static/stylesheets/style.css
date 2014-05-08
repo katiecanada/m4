@@ -15,12 +15,6 @@
   border-color:green;
   }
 
-<<<<<<< HEAD
-/*  body{
-    background-color: pink;
-  }*/
-
-  /*begin copy-pasted tab CSS*/
 body {
 padding: 20px;
 font-family: Arial, Helvetica, sans-serif;
@@ -78,12 +72,13 @@ font-size: 14px;
     display: none;
 }
 
-#tab-1 
-=======
-  body{
-    background-color: pink;
+#tab-1 {
+  display: block;
+}
+
+#otherCursor{
+    position: absolute;
+    left: 100px;
+    z-index: 1;
   }
-
-
-  #otherCursor{
   
