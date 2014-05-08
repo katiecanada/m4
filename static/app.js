@@ -7,6 +7,7 @@ var missedMessages = 0;
 // Keep track of where the mouse is and whether it's moved across a grid.
 var mouseMoved = false;
 var lastX, lastY;
+var otherX, otherY;
 
 
 /** Move mouse
@@ -102,8 +103,13 @@ function onMessageReceived(event) {
 
    console.log("x-value:"+data[1]);
     console.log("y-value:"+data[2]);
-   droppedPackageCount(event.senderId, parseInt(data[0]));
-   showLossRates();
+    otherX=data[1];
+    otherY=data[2];
+    document.getElementById("#otherCursor").style.left=otherX;
+    document.getElementById("#otherCursor").style.top=otherY;
+
+   //droppedPackageCount(event.senderId, parseInt(data[0]));
+   //showLossRates();
  } catch (e) {
    console.log(e);
  }
@@ -112,10 +118,6 @@ function onMessageReceived(event) {
 /** Kick off the app. */
 function init() {
   console.log("initing");
-<<<<<<< HEAD
-
-=======
->>>>>>> 2ad794c179c2f672e8f6bcd41447a918815bb239
  // When API is ready...
  gapi.hangout.onApiReady.add(
      function(eventObj) {
@@ -142,11 +144,3 @@ function init() {
 // Wait for gadget to load.                                                       
 gadgets.util.registerOnLoadHandler(init);
 
-<<<<<<< HEAD
-$(document).ready(function() {
-    $(".tabs-menu a").click(function(event) {
-        event.preventDefault();
-        $(this).parent().addClass("current");
-        $(this).parent().siblings().removeClass("current");
-        var tab = $(this).attr("href");
-        $(".tab
