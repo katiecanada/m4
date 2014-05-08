@@ -7,6 +7,7 @@ var missedMessages = 0;
 // Keep track of where the mouse is and whether it's moved across a grid.
 var mouseMoved = false;
 var lastX, lastY;
+var otherX, otherY;
 
 
 /** Move mouse
@@ -107,8 +108,13 @@ function onMessageReceived(event) {
 
    console.log("x-value:"+data[1]);
     console.log("y-value:"+data[2]);
-     document.getElementById("otherCursor").style.left=otherX;
-    document.getElementById("otherCursor").style.top=otherY;
+    otherX=data[1];
+    otherY=data[2];
+    console.log(document.getElementById("otherCursor"));
+    console.log("left before: "+document.getElementById("otherCursor").style.left);
+     document.getElementById("otherCursor").style.left=otherX+50;
+    document.getElementById("otherCursor").style.top=otherY+50;
+     console.log("left before: "+document.getElementById("otherCursor").style.left);
    //droppedPackageCount(event.senderId, parseInt(data[0]));
    //showLossRates();
  } catch (e) {
