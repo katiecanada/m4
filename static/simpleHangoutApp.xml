@@ -19,141 +19,36 @@
 	</ModulePrefs>
 	<Content type="html"><![CDATA[     
 
-<html>
-<style type="text/css">
-<!--
-.button {
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
-  background: -moz-linear-gradient(top, #fff, #ddd);  
-  border: 1px solid #bbb;
-}
+<link href="//tranquil-rite-573.appspot.com/stylesheets/style.css" rel="stylesheet" type="text/css">
 
-.button:active {
-	background: -webkit-gradient(linear, left top, left bottom, from(#aaa), to(#333)); 
-	background: -moz-linear-gradient(bottom, #ddd, #aaa); }
-
-/*begin copy-pasted tab CSS*/
-body {
-padding: 20px;
-font-family: Arial, Helvetica, sans-serif;
-line-height: 1.5;
-font-size: 14px;        
-}
-
-.tabs-menu {
-    height: 30px;
-    float: left;
-    clear: both;
-}
-
-.tabs-menu li {
-    height: 30px;
-    line-height: 30px;
-    float: left;
-    margin-right: 10px;
-    background-color: #ccc;
-    border-top: 1px solid #d4d4d1;
-    border-right: 1px solid #d4d4d1;
-    border-left: 1px solid #d4d4d1;
-}
-
-.tabs-menu li.current {
-    position: relative;
-    background-color: #fff;
-    border-bottom: 1px solid #fff;
-    z-index: 5;
-}
-
-.tabs-menu li a {
-    padding: 10px;
-    text-transform: uppercase;
-    color: #fff;
-    text-decoration: none; 
-}
-
-.tabs-menu .current a {
-    color: #2e7da3;
-}
-
-.tab {
-    border: 1px solid #d4d4d1;
-    background-color: #fff;
-    float: left;
-    margin-bottom: 20px;
-    width: auto;
-}
-
-.tab-content {
-    width: 660px;
-    padding: 20px;
-    display: none;
-}
-
-#tab-1 {
- display: block;   
-}
-/*end copy-pasted tab CSS*/
-
--->
-</style>
 <body>
-
 <script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
 
-<h3>Social Shopping Hangout App ANDREW</h3>
+<div id="shoppingDiv">
 
-<div id="tabs-container">
-    <ul class="tabs-menu">
-        <li class="current"><a href="#tab-1">Shared View</a></li>
-        <li><a href="#tab-2">Private View</a></li>
-    </ul>
-    <div class="tab">
-        <div id="tab-1" class="tab-content">
-            <iframe src="https://astore.amazon.com/247shoppingpr-20" width="100%" height="500" frameborder="0" scrolling="yes"></iframe>
-        </div>
-        <div id="tab-2" class="tab-content">
-            <iframe src="https://astore.amazon.com/247shoppingpr-20" width="100%" height="500" frameborder="0" scrolling="yes"></iframe>
-        </div>
-    </div>
+<h3>Social Shopping Hangout App</h3>
+
+  <div id="tabs-container">
+      <ul class="tabs-menu">
+          <li class="current"><a href="#tab-1">Shared View</a></li>
+          <li><a href="#tab-2">Private View</a></li>
+      </ul>
+      <div class="tab">
+          <div id="tab-1" class="tab-content">
+              <iframe src="https://astore.amazon.com/247shoppingpr-20" width="100%" height="500" frameborder="0" scrolling="yes"></iframe>
+          </div>
+          <div id="tab-2" class="tab-content">
+              <iframe src="https://astore.amazon.com/247shoppingpr-20" width="100%" height="500" frameborder="0" scrolling="yes"></iframe>
+          </div>
+      </div>
+  </div>
+
+
 </div>
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//tranquil-rite-573.appspot.com/js/app.js"></script>
 
-<div id="shoppingDiv"></div>
-
-<script>
-
-/** Kick off the app. */
-function init() {
-  // When API is ready...
-  gapi.hangout.onApiReady.add(
-      function(eventObj) {
-        if (eventObj.isApiReady) {
-          try {
-            $(document).ready(function() {
-                $(".tabs-menu a").click(function(event) {
-                    event.preventDefault();
-                    $(this).parent().addClass("current");
-                    $(this).parent().siblings().removeClass("current");
-                    var tab = $(this).attr("href");
-                    $(".tab-content").not(tab).css("display", "none");
-                    $(tab).fadeIn();
-                });
-            });
-          } catch (e) {
-            console.log('init:ERROR');
-            console.log(e);
-          }
-        }
-      });
-}
-
-
-// Wait for gadget to load.                                                       
-gadgets.util.registerOnLoadHandler(init);
-</script>
-  
 </body>
 ]]>
 </Content>
