@@ -29,7 +29,21 @@
 <div id="shoppingDiv">
 
 <h3>Social Shopping Hangout App</h3>
-<iframe src="https://astore.amazon.com/247shoppingpr-20" width="100%" height="500" frameborder="0" scrolling="yes"></iframe>
+
+<div id="tabs-container">
+    <ul class="tabs-menu">
+        <li class="current"><a href="#tab-1">Shared View</a></li>
+        <li><a href="#tab-2">Private View</a></li>
+    </ul>
+    <div class="tab">
+        <div id="tab-1" class="tab-content">
+            <iframe src="https://astore.amazon.com/247shoppingpr-20" width="100%" height="500" frameborder="0" scrolling="yes"></iframe>
+        </div>
+        <div id="tab-2" class="tab-content">
+            <iframe src="https://astore.amazon.com/247shoppingpr-20" width="100%" height="500" frameborder="0" scrolling="yes"></iframe>
+        </div>
+    </div>
+</div>
 
 
 </div>
