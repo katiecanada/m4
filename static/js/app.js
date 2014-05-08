@@ -152,6 +152,7 @@ function init() {
 // Wait for gadget to load.                                                       
 gadgets.util.registerOnLoadHandler(init);
 
+//http://jsfiddle.net/syahrasi/Us8uc/
 $(document).ready(function() {
     $(".tabs-menu a").click(function(event) {
         event.preventDefault();
