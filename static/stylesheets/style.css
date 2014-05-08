@@ -15,10 +15,12 @@
   border-color:green;
   }
 
-<<<<<<< HEAD
-/*  body{
-    background-color: pink;
-  }*/
+  #otherCursor{
+    position: absolute;
+    left: 100px;
+    z-index: 1;
+  }
+
 
   /*begin copy-pasted tab CSS*/
 body {
@@ -78,12 +80,8 @@ font-size: 14px;
     display: none;
 }
 
-#tab-1 
-=======
-  body{
-    background-color: pink;
-  }
+#tab-1 {
+ display: block;   
+}
 
-
-  #otherCursor{
-  
+/*end copy-pasted CSS*/

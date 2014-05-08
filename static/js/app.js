@@ -112,10 +112,7 @@ function onMessageReceived(event) {
 /** Kick off the app. */
 function init() {
   console.log("initing");
-<<<<<<< HEAD
-
-=======
->>>>>>> 2ad794c179c2f672e8f6bcd41447a918815bb239
+  
  // When API is ready...
  gapi.hangout.onApiReady.add(
      function(eventObj) {
@@ -142,11 +139,13 @@ function init() {
 // Wait for gadget to load.                                                       
 gadgets.util.registerOnLoadHandler(init);
 
-<<<<<<< HEAD
 $(document).ready(function() {
     $(".tabs-menu a").click(function(event) {
         event.preventDefault();
         $(this).parent().addClass("current");
         $(this).parent().siblings().removeClass("current");
         var tab = $(this).attr("href");
-        $(".tab
+        $(".tab-content").not(tab).css("display", "none");
+        $(tab).fadeIn();
+    });
+});
