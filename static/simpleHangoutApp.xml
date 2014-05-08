@@ -28,9 +28,10 @@
 
 <h3>Social Shopping Hangout App</h3>
 
+
 <img id="otherCursor" src="http://etc-mysitemyway.s3.amazonaws.com/icons/legacy-previews/icons/firey-orange-jelly-icons-business/079745-firey-orange-jelly-icon-business-cursor.png" width="50" height="50">
 
-<!-- http://jsfiddle.net/syahrasi/Us8uc/ -->
+<!-- source: http://jsfiddle.net/syahrasi/Us8uc/ -->
 <div id="tabs-container">
     <ul class="tabs-menu">
         <li class="current"><a href="#tab-1">Shared View</a></li>
@@ -49,8 +50,8 @@
 
 </div>
 
-
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
 
 <script src="//tranquil-rite-573.appspot.com/js/app.js"></script>
 

@@ -62,6 +62,11 @@ function animate() {
                          lastY]));
      mouseMoved = false;
     console.log("sent message");
+     console.log("hi rush");
+    console.log("foo1: " + document.getElementById("foo1"));
+    console.log("otherCursor: " + document.getElementById("otherCursor"));
+    console.log("bar1: " + document.getElementById("bar1"));
+    console.log("bye rush");
    }
  });
 }
@@ -102,8 +107,10 @@ function onMessageReceived(event) {
 
    console.log("x-value:"+data[1]);
     console.log("y-value:"+data[2]);
-   droppedPackageCount(event.senderId, parseInt(data[0]));
-   showLossRates();
+     document.getElementById("otherCursor").style.left=otherX;
+    document.getElementById("otherCursor").style.top=otherY;
+   //droppedPackageCount(event.senderId, parseInt(data[0]));
+   //showLossRates();
  } catch (e) {
    console.log(e);
  }
