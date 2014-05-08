@@ -24,8 +24,6 @@
 <body>
 <script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
 
-<script src="//tranquil-rite-573.appspot.com/static/app.js"></script>
-
 <div id="shoppingDiv">
 
 <h3>Social Shopping Hangout App</h3>
@@ -35,6 +33,7 @@
 </div>
 
 
+<script src="//tranquil-rite-573.appspot.com/js/app.js"></script>
 
 </body>
 ]]>
