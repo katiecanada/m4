@@ -139,11 +139,13 @@ function init() {
 // Wait for gadget to load.                                                       
 gadgets.util.registerOnLoadHandler(init);
 
-<<<<<<< HEAD
 $(document).ready(function() {
     $(".tabs-menu a").click(function(event) {
         event.preventDefault();
         $(this).parent().addClass("current");
         $(this).parent().siblings().removeClass("current");
         var tab = $(this).attr("href");
-        $(".tab
+        $(".tab-content").not(tab).css("display", "none");
+        $(tab).fadeIn();
+      });
+  });
